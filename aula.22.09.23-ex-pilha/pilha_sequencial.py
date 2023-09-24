@@ -1,6 +1,6 @@
 # Pilha linear sequencial
 
-class Stack():
+class Stack:
     def __init__(self):
         self._itens = list()
 

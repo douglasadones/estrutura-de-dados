@@ -5,7 +5,6 @@ class Lista:
     
     def lista_vazia(self):
         return self.n == 0
-    
 
     def exibir(self):
         for item in self.itens:
@@ -17,7 +16,6 @@ class Lista:
             print(self.itens[i], end=' ')
             i += 1
         print()
-
 
     def inserir(self, val, pos):
         if pos < self.n:
@@ -34,8 +32,11 @@ class Lista:
         self.n = 0
 
     def remover(self, pos):
-        self.itens.pop(pos)
-        self.n -= 1
+        if not self.lista_vazia() and pos < self.n:
+            self.n -= 1
+            return self.itens.pop(pos)
+        else:
+            return -1
 
     def ex_elemento(self, pos):
         print(self.itens[pos])
