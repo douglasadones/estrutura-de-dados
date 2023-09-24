@@ -29,7 +29,7 @@ class Lista:
     def esvaziar(self):
         i = 0
         while i < self.n:
-            self.pop(0)
+            self.itens.pop(0)
             i += 1
         self.n = 0
 

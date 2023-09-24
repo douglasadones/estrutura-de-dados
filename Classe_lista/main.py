@@ -1,5 +1,10 @@
 from list_seq import Lista
 
+"""
+Lista Linear, sequencial, estática Em uma estrutura estática, 
+nós alteramos apenas o índice (self.n) 
+"""
+
 L = Lista()
 
 menu = """EDITOR DE LISTAS
@@ -14,8 +19,10 @@ DIGITE SUA OPÇÃO: """
 
 while True:
     op = int(input(menu))
-    if op == 1:   
+    if op == 1:
+        print('~'*5, 'lista', '~'*5)
         L.exibir()
+        print('~'*17)
     elif op == 2:
         val = int(input('Informe o valor: '))
         pos = int(input('Informe a posição: '))
@@ -41,7 +48,6 @@ while True:
             L.ex_posicao(val)
         else:
             print('Valor inexistente')
-
     elif op == 6:
         L.esvaziar()
     elif op == 0:
