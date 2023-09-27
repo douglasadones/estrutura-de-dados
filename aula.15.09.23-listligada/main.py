@@ -13,4 +13,5 @@ def principal():
     lista.limpar()
     print(f'Lista após apagar o endereço: {lista.mostrar()}')
 
+
 principal()

@@ -72,11 +72,19 @@ class Lista:
         return None
 
     def limpar(self):
-        self.prim = None
+        temp = self.prim
+        while temp is not None:
+            self.prim = temp.prox
+            temp = temp.prox
         self.tamanho = 0
 
 
-# class Lista:  # Professor
+
+
+
+
+
+# class Lista:  # Da aula que faltei
 #     def __init__(self):
 #         self.prim = None
 #         self.tamanho = 0
