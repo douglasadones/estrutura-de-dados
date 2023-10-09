@@ -1,5 +1,5 @@
-## We could using a dictionary where each key it's the priority and all the values
-## its a list with all the items with the same priority. Warning! Node only need the 'item' information.
+"""We could using a dictionary where each key it's the priority and all the values
+its a list with all the items with the same priority. Warning! Node only need the 'item' information."""
 
 class Node:
     def __init__(self, queue_number, item, next=None) -> None:
@@ -43,7 +43,7 @@ class LinkedPriorityQueue:
                     previous_node, next_node = next_node, next_node.next
         self.size += 1
         print(f'Size: {self.size}')
-
+    
     def dequeue(self):
         deleted_node = self.qhead
         self.qhead = self.qhead.next

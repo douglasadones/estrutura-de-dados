@@ -34,21 +34,21 @@ def Seq_and_linked_priority_queue_test(queue_type):
         queue = LinkedPriorityQueue()
         print('Type of priority queue used: Linked Priority Queue')
     while True:
-
         value = int(input('integer Value (<0 to finish): '))
         if value < 0:
             break
         priority = int(input('Priority: '))
         queue.enqueue(priority, value)
+        queue.show()
 
     print(f'Priority Queue has {queue.__len__()} items')
 
-    print('Clearing Priority Queue')
-    while not queue.isEmpty():
-        node = queue.dequeue()
-        print(f'Removed node -> item: {node.item:>3} | Priority: {node.priority}')
+    # print('Clearing Priority Queue')
+    # while not queue.isEmpty():
+    #     node = queue.dequeue()
+    #     print(f'Removed node -> item: {node.item:>3} | Priority: {node.priority}')
 
-    print(f'Priority Queue has {queue.__len__()} items')
+    # print(f'Priority Queue has {queue.__len__()} items')
     
 
 
