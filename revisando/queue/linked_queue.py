@@ -25,7 +25,7 @@ class Queue:
             self.qtail.next = new_node
             self.qtail = new_node
         self.count += 1
-    
+
     def dequeue(self):
         if not self.isEmpty():
             removed_node = self.qhead

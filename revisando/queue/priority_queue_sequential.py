@@ -26,5 +26,3 @@ class SequentialPriorityQueue:
                     highest_priority = item
             self._itens.remove(highest_priority)
             return highest_priority 
-
-

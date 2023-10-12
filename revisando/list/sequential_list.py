@@ -1,47 +1,47 @@
 class Lista:
     def __init__(self) -> None:
-        self.itens = [1, 2, 3, 4]
-        self.n = 4
-    
-    def lista_vazia(self):
+        self.itens = []
+        self.n = 0
+
+    def isEmpty(self) -> bool:
         return self.n == 0
 
-    def exibir(self):
+    def show(self):
         for item in self.itens:
             print(item, end=' ')
         print()
-        # ou
+        # or
         i = 0
         while i < self.n:
             print(self.itens[i], end=' ')
             i += 1
         print()
 
-    def inserir(self, val, pos):
-        if pos < self.n:
+    def insert(self, val, pos: int):
+        if 0 <= pos < self.n:
             self.itens.insert(pos, val)
-        else:
-            self.itens.append(val)                        
+        elif pos >= self.n:
+            self.itens.append(val)
         self.n += 1
 
-    def esvaziar(self):
+    def clear(self):
         i = 0
         while i < self.n:
             self.itens.pop(0)
             i += 1
         self.n = 0
 
-    def remover(self, pos):
-        if not self.lista_vazia() and pos < self.n:
+    def remove(self, pos):
+        if not self.isEmpty() and pos < self.n:
             self.n -= 1
             return self.itens.pop(pos)
         else:
             return -1
 
-    def ex_elemento(self, pos):
+    def remove_value(self, pos):
         print(self.itens[pos])
         return self.itens[pos]
 
-    def ex_posicao(self, valor):
+    def remove_pos(self, valor):
         print(self.itens.index(valor))
         return self.itens.index(valor)

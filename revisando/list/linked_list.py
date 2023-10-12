@@ -3,31 +3,28 @@ class No():
         self.info = info
         self.prox = None  # "Ponteiro"
 
-    def get_info(self):
-        return self.info
-
 
 class Lista:
     def __init__(self):
         self.prim = None
         self.tamanho = 0
 
-    def estaVazia(self):
+    def isEmpty(self):
         return self.tamanho == 0
 
-    def percorrer(self):  # lógica para percorrer a lista ligada.
+    def walk_through_escheme(self):  # lógica para percorrer a lista ligada.
         temp = self.prim
         while temp is not None:
             # Realizar a operação devida com o temp.info
             temp = temp.prox
 
-    def mostrar(self):  # mostra todos os elementos da lista
+    def show(self):  # mostra todos os elementos da lista
         temp = self.prim
         while temp is not None:
             print(temp.info, end=' ')
             temp = temp.prox
 
-    def buscar(self, value):  # retorna o nó cuja informação contida é a informada no param. value
+    def search(self, value):  # retorna o nó cuja informação contida é a informada no param. value
         temp = self.prim
         while temp is not None and temp.info != value:
             temp = temp.prox
@@ -35,7 +32,7 @@ class Lista:
             return temp
         return None
 
-    def inserir(self, valor, pos=None):
+    def insert(self, valor, pos=None):
         novo = No(valor)
         if pos is None:  # Inserir no início
             novo.prox = self.prim
@@ -55,7 +52,7 @@ class Lista:
                 temp.prox = novo  # Nó anterior apontando para o novo nó adicionado
         self.tamanho += 1
 
-    def val_remover(self, value):
+    def remove_value(self, value):
         """Remove um nó a partir de seu value"""
         atual = self.prim
         anterior = None
@@ -71,7 +68,7 @@ class Lista:
             return atual
         return None
 
-    def limpar(self):
+    def clear(self):
         temp = self.prim
         while temp is not None:
             self.prim = temp.prox
