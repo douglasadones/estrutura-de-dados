@@ -13,7 +13,7 @@ class LinkedPriorityQueue:
         self.qhead = None
         self.qtail = None
         self.size = 0
-    
+
     def isEmpty(self) -> bool:
         return self.size == 0
 
@@ -48,7 +48,6 @@ class LinkedPriorityQueue:
         deleted_node = self.qhead
         self.qhead = self.qhead.next
         return deleted_node
-
 
     def show(self):
         temp = self.qhead
