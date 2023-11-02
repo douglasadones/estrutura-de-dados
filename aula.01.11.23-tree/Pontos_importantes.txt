@@ -1,0 +1,29 @@
+0 - Uma árvore é por definição uma *estrutura recursiva*.
+
+1 - O primeiro nó (e mais alto) é chamado *raiz*.
+
+2 - Um nó y abaixo do x é chamado de filho de x. (x é pai)
+
+3 - Nós com filhos, são chamados nós internos.
+
+4 - Nós sem filhos são chamados nós externos/folhas.
+
+5 - Cada nó pode ser raíz de sua própria subárvore.
+
+6 - O *grau* de um nó é igual ao seu número de filhos.
+
+7 - O Grau de uma árvore é o mesmo que o grau de um nó com o maior número de filhos.
+
+8 - Cada nó deve ser atingível a partir da raiz através de uma única sequência. (caminho)
+
+9 - O número de arestas (ou nós) em um caminho é chamado de *comprimento do caminho*.
+
+10 - A *altura de uma árvore* é o comprimento do caminho mais longo da raiz até uma das folhas.
+
+11 - O *nível do nó* é o comprimento do caminho da raiz até este nó.
+
+12 - Se todos os nós em todos os níveis, exceto o último, tivessem dois filhos, então haveria: 2^i nós. Essa é a chamada árvore binária completa.
+
+13 - Uma árvore binária "completa" é uma árvore binária em que cada nó inteiro contém dois filhos.
+
+14 - Uma árvore binária "perfeita" é uma árvore binária completa na qual todos os nós folhas estão no mesmo nível.
