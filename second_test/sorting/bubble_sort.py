@@ -3,7 +3,7 @@ Lógica do bubble sort: A cada iteração, o maior valor é posicionado no final
 """
 
 
-def bubbleSort(theSeq):
+def bubbleSort(theSeq):  # Levando o maior valor para o final
     n = len(theSeq)
     for i in range(n - 1):
         for j in range(n - 1 - i):
@@ -11,4 +11,3 @@ def bubbleSort(theSeq):
             second = theSeq[j+1]
             if first > second:
                 theSeq[j], theSeq[j+1] = theSeq[j+1], theSeq[j]
-
