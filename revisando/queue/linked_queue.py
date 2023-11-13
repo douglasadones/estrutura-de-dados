@@ -2,7 +2,7 @@ class Node:
     def __init__(self, item, next=None) -> None:
         self.item = item
         self.next = next
-
+ 
 
 class Queue:
     def __init__(self) -> None:
@@ -32,3 +32,4 @@ class Queue:
             self.qhead = self.qhead.next
             self.count -= 1
             return removed_node.item
+

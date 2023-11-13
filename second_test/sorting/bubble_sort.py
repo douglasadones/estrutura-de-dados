@@ -11,3 +11,10 @@ def bubbleSort(theSeq):  # Levando o maior valor para o final
             second = theSeq[j+1]
             if first > second:
                 theSeq[j], theSeq[j+1] = theSeq[j+1], theSeq[j]
+
+
+teste = [5, 2, 3, 7, 5, 8, 9, 1]
+
+
+bubbleSort(teste)
+print(teste)

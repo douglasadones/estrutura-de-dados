@@ -1,12 +1,12 @@
 from queue_to_teste import Queue
 
+
 class Node:
     def __init__(self, data) -> None:
         self.data = data
         self.left = None
         self.right = None
     
-
 
 # percursoS em Profundidade.
 
