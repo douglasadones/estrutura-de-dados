@@ -71,14 +71,36 @@ class BinsearchTree:
                 if node.right is not None:
                     q.enqueue(node.right)
 
-    def search(self, subtree, value):
+    def _search(self, subtree, value):
         if subtree is None:
             return None
         elif value < subtree.data:
-            subtree.left = self.search(subtree.left, value)  #cuidado para não confundir "subtree.left ="
+            subtree.left = self.search(subtree.left, value)  #cuidado para não confundir o "subtree.left ="
         elif value > subtree.data:
             subtree.right = self.search(subtree.right, value)
         else:
             return subtree
 
-    def
+    def _insert(self, subtree, value):
+        if subtree is None:
+            subtree = _Node(value)
+        elif value < subtree.data:
+            subtree.left = self.insert(subtree.left, value)
+        elif value > subtree.data:
+            subtree.right = self.insert(subtree.right, value)
+        else:
+            return subtree
+    
+    # O método insert é só um auxiliar desse método.
+    def add(self, value):
+        node = self._search(self._root, value)
+        if node is None:
+            self._root = self._insert(self._root, value)
+            self._size += 1
+            return True
+        else:
+            return False
+    
+    def _remove(self, subtree, target):
+        pass
+        
